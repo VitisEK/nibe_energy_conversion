@@ -1,0 +1,7 @@
+{
+  "domain": "nibe_enery_conversion",
+  "name": "NIBE Energy Conversion",
+  "version": "1.0.0",
+  "config_flow": true,
+  "iot_class": "calculated"
+}

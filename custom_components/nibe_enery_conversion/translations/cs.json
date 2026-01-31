@@ -1,0 +1,78 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NIBE převod energie",
+        "description": "Vyberte vstupní senzory, které reportují energii za poslední hodinu (kWh).",
+        "data": {
+          "prod_cooling_sensor": "Vyrobeno chlazení za poslední hodinu",
+          "prod_heating_sensor": "Vyrobeno topení za poslední hodinu",
+          "prod_hot_water_sensor": "Vyrobeno TUV za poslední hodinu",
+          "used_cooling_sensor": "Spotřeba chlazení za poslední hodinu",
+          "used_heating_sensor": "Spotřeba topení za poslední hodinu",
+          "used_hot_water_sensor": "Spotřeba TUV za poslední hodinu",
+          "aux_used_heating_sensor": "Dohřev topení za poslední hodinu",
+          "aux_used_hot_water_sensor": "Dohřev TUV za poslední hodinu"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Plán aktualizace",
+        "description": "Zvolte, kdy se má spouštět hodinové sčítání.",
+        "data": {
+          "update_minute": "Minuta v hodině",
+          "run_on_start": "Spustit při startu Home Assistant (jen pokud už minuta proběhla)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "prod_cooling_total": {
+        "name": "Vyrobeno chlazení (kWh)"
+      },
+      "prod_heating_total": {
+        "name": "Vyrobeno topení (kWh)"
+      },
+      "prod_hot_water_total": {
+        "name": "Vyrobeno TUV (kWh)"
+      },
+      "used_cooling_total": {
+        "name": "Spotřeba chlazení (kWh)"
+      },
+      "used_heating_total": {
+        "name": "Spotřeba topení (kWh)"
+      },
+      "used_hot_water_total": {
+        "name": "Spotřeba TUV (kWh)"
+      },
+      "aux_used_heating_total": {
+        "name": "Dohřev topení (kWh)"
+      },
+      "aux_used_hot_water_total": {
+        "name": "Dohřev TUV (kWh)"
+      },
+      "produced_total": {
+        "name": "Vyrobená energie celkem (kWh)"
+      },
+      "used_total": {
+        "name": "Spotřeba energie celkem (kWh)"
+      },
+      "cop_total": {
+        "name": "COP celkem (poslední hodina)"
+      },
+      "cop_hot_water": {
+        "name": "COP TUV (poslední hodina)"
+      },
+      "cop_heating": {
+        "name": "COP topení (poslední hodina)"
+      },
+      "cop_cooling": {
+        "name": "COP chlazení (poslední hodina)"
+      }
+    }
+  }
+}

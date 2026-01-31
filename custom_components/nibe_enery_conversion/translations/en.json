@@ -1,0 +1,78 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NIBE energy conversion",
+        "description": "Select the input sensors that report past-hour energy values (kWh).",
+        "data": {
+          "prod_cooling_sensor": "Energy produced for cooling during past hour",
+          "prod_heating_sensor": "Energy produced for heating during past hour",
+          "prod_hot_water_sensor": "Energy produced for hot water during past hour",
+          "used_cooling_sensor": "Energy used for cooling during past hour",
+          "used_heating_sensor": "Energy used for heating during past hour",
+          "used_hot_water_sensor": "Energy used for hot water during past hour",
+          "aux_used_heating_sensor": "Auxiliary heater energy used for heating during past hour",
+          "aux_used_hot_water_sensor": "Auxiliary heater energy used for hot water during past hour"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update schedule",
+        "description": "Choose when the hourly aggregation runs.",
+        "data": {
+          "update_minute": "Minute past the hour",
+          "run_on_start": "Run on Home Assistant start (only if the minute has passed)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "prod_cooling_total": {
+        "name": "Produced cooling (kWh)"
+      },
+      "prod_heating_total": {
+        "name": "Produced heating (kWh)"
+      },
+      "prod_hot_water_total": {
+        "name": "Produced hot water (kWh)"
+      },
+      "used_cooling_total": {
+        "name": "Used cooling (kWh)"
+      },
+      "used_heating_total": {
+        "name": "Used heating (kWh)"
+      },
+      "used_hot_water_total": {
+        "name": "Used hot water (kWh)"
+      },
+      "aux_used_heating_total": {
+        "name": "Auxiliary heating (kWh)"
+      },
+      "aux_used_hot_water_total": {
+        "name": "Auxiliary hot water (kWh)"
+      },
+      "produced_total": {
+        "name": "Produced total (kWh)"
+      },
+      "used_total": {
+        "name": "Used total (kWh)"
+      },
+      "cop_total": {
+        "name": "COP total (last hour)"
+      },
+      "cop_hot_water": {
+        "name": "COP hot water (last hour)"
+      },
+      "cop_heating": {
+        "name": "COP heating (last hour)"
+      },
+      "cop_cooling": {
+        "name": "COP cooling (last hour)"
+      }
+    }
+  }
+}
