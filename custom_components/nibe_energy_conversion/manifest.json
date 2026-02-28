@@ -1,8 +1,8 @@
 {
   "domain": "nibe_energy_conversion",
   "name": "NIBE Energy Conversion",
-  "config_flow": true,
   "codeowners": ["@VitisEK"],
+  "config_flow": true,
   "documentation": "https://github.com/VitisEK/nibe_energy_conversion",
   "iot_class": "calculated",
   "issue_tracker": "https://github.com/VitisEK/nibe_energy_conversion/issues",
