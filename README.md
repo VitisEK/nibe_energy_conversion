@@ -5,7 +5,7 @@
 [![](https://img.shields.io/badge/GitHub%20Sponsors-SUPPORT-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/VitisEK)
 [![](https://img.shields.io/badge/COMMUNITY-FORUM-success?style=for-the-badge)](https://community.home-assistant.io)
 
-# NIBE Energy Conversion (nibe_enery_conversion)
+# NIBE Energy Conversion (nibe_energy_conversion)
 
 Custom Home Assistant integration that converts NIBE “past hour” energy sensors (kWh) into cumulative totals and COP metrics.
 
@@ -17,8 +17,17 @@ Custom Home Assistant integration that converts NIBE “past hour” energy sens
 - 4 COP sensors for last hour (total, hot water, heating, cooling)
 - No helper entities; state stored internally
 
-## Installation (local)
-1) Copy `custom_components/nibe_enery_conversion` into your Home Assistant config directory under `custom_components/`.
+## Installation
+### HACS
+1) In Home Assistant, open HACS → Integrations.
+2) Open the menu in the top right corner and choose Custom repositories.
+3) Add `https://github.com/VitisEK/nibe_energy_conversion` as category `Integration`.
+4) Find `NIBE Energy Conversion` in HACS and install it.
+5) Restart Home Assistant.
+6) Add the integration in Settings → Devices & Services → Add Integration.
+
+### Manual
+1) Copy `custom_components/nibe_energy_conversion` into your Home Assistant config directory under `custom_components/`.
 2) Restart Home Assistant.
 3) Add integration: Settings → Devices & Services → Add Integration → “NIBE Energy Conversion”.
 
@@ -61,7 +70,7 @@ A one-time rebuild tool that recalculates historical energy totals from hourly �
 ### What it does
 - Reads hourly long-term statistics from `home-assistant_v2.db`.
 - Rebuilds cumulative totals for all output sensors and writes them to `statistics` and (optionally) `statistics_short_term`.
-- Updates the integration storage file (`.storage/nibe_enery_conversion_data_<entry_id>`) with the latest cumulative totals and `last_processed`.
+- Updates the integration storage file (`.storage/nibe_energy_conversion_data_<entry_id>`) with the latest cumulative totals and `last_processed`.
 - Stops Home Assistant Core before writing, makes backups, then starts Core again.
 
 ### How to use
@@ -77,11 +86,9 @@ Notes:
 
 ## Changelog
 
-### v1.0.0 
+### v1.0.1 
 
-*   Initial release
+*   Fix integration domain spelling for HACS publishing.
 
 ## Support
-This is a local custom integration. No GitHub publishing required.
-
-
+Issues and feature requests: https://github.com/VitisEK/nibe_energy_conversion/issues

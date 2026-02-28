@@ -1,4 +1,4 @@
-﻿DOMAIN = "nibe_enery_conversion"
+DOMAIN = "nibe_energy_conversion"
 PLATFORMS = ["sensor"]
 
 CONF_PROD_COOLING = "prod_cooling_sensor"
